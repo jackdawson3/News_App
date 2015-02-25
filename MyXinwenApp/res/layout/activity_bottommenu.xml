@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@android:color/white">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0" />
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.0"
+            android:visibility="gone"/>
+        <RadioGroup
+            android:id="@+id/main_radio"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/activity_maintop"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" 
+            android:layout_marginLeft="-2.5dp"
+            android:layout_marginRight="-2.5dp"
+            android:layout_marginBottom="-2.5dp">
+            <RadioButton
+                android:id="@+id/home_button"
+                style="@style/main_tab_bottom"
+                android:layout_marginTop="1.5dp"
+                android:background="@drawable/selector_bottomtab"
+                android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="20.0dp"
+				android:layout_marginRight="20.0dp"
+                />
+            <RadioButton
+                android:id="@+id/linshi1"
+                style="@style/main_tab_bottom"
+                android:layout_marginTop="1.5dip"
+                android:background="@drawable/selector_bottomtab"
+                android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="20.0dp"
+				android:layout_marginRight="20.0dp"
+                 />            
+            <RadioButton
+                android:id="@+id/linshi2"
+                style="@style/main_tab_bottom"
+                android:layout_marginTop="1.5dp"
+                android:background="@drawable/selector_bottomtab"
+                android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="20.0dp"
+				android:layout_marginRight="20.0dp"
+                />
+        </RadioGroup>
+    </LinearLayout>
+</TabHost>
+
+<!--
+	Conclude:
+			1、TabHost是一个容器，并不是一种布局，因为 我们要实现切换卡（TabWidget）这种功能，所以
+		必须使用TabHost这种容器，在里面TabHost里嵌套TabWidge。
+			2、这个布局使用的线性布局，分为两部分，上面是Framelayout，下面是TabWidget。之所以我们看到
+		界面中，切换卡只占一小部分，是因为我们为这两部分设置了layout_weight属性，它的作用参考“style.xml”
+		里的注释。
+			3、之所以切换卡上方用Framelayout布局，具体我也不是十分明白，如果换成其它布局，则会运行出错。
+		再者，FrameLayout 是一种覆盖性布局。
+
+ -->
+
+
+
+
+
+
+
+
