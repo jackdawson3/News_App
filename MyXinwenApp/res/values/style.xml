@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <!--不理解代码为什么是这样，但是有效果 -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+<style name="AppTheme" parent="android:Theme.Light" />
+     <style name="main_tab_bottom">   
+        <!--不理解代码为什么是这样，但是如果去掉下面两行代码的任意一行，RadioButton的原来的圆形按钮就会显示出来 -->     
+        <item name="android:gravity">center_horizontal</item>  
+        <item name="android:singleLine">true</item> 
+        <item name="android:layout_weight">1.0</item>
+    </style>
+</resources>
+
+<!--Conclude:
+	1、layout_weight 用于给一个线性布局中的诸多视图的重要度赋值。 
+		所有的视图都有一个layout_weight值，默认为零，意思是需要显示 
+		多大的视图就占据多大的屏幕空 间。若赋一个高于零的值，则将父视 
+		图中的可用空间分割，分割大小具体取决于每一个视图的layout_weight 
+		值以及该值在当前屏幕布局的整体 layout_weight值和在其它视图屏幕布 
+		局的layout_weight值中所占的比率而定。 
+-->
